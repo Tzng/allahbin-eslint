@@ -1,3 +1,15 @@
+## 安装
+
+npm
+```
+npm i @allahbin/eslint --dev
+```
+
+yarn
+```
+yarn add @allahbin/eslint --dev
+```
+
 使用方式：
 
 ## .prettierrc.js 中使用
@@ -19,44 +31,13 @@ module.exports = prettier;
 }
 ```
 
-## Breaking Changes
+## 其他配置
 
-- Uses Eslint v7 from v2.x.x
-- Dropped usage `eslint-config-airbnb` in favour of `@allahbin/eslint-config`
-
-## Installation
-
-```
-# npm
-npx install-peerdeps @allahbin/eslint-config --dev
-
-# yarn
-npx install-peerdeps @allahbin/eslint-config --dev --yarn
-```
-
-This will install the required `peerDependencies` for eslint
-
-## Usage
-
-Add extends of the preferred base config to your `.eslintrc.json`:
-
-```json
-{
-  "extends": "@allahbin/eslint-config/typescript",
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  }
-}
-
-```
-
-## Other configs
-
-This config also exposes `react`, `node`, and `typescript` configs that I use often.
+此配置还公开了我经常使用的“react”、“node”和“typescript”配置。
 
 ### TypeScript
 
-To use the ts configuration, install the `TypeScript` compiler:
+要使用ts配置，请安装“TypeScript”编译器：
 
 ```
 # npm
@@ -71,7 +52,7 @@ yarn add --dev typescript
 ```json
 {
   "extends": [
-    "@allahbin/eslint-config/typescript"
+    "@allahbin/eslint/typescript"
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
@@ -84,27 +65,20 @@ yarn add --dev typescript
 
 ### Node.js
 
-It is to be used in combination with the base config (recommended)
+它将与基本配置结合使用（推荐）
 
 `.eslintrc.json:`
 
 ```json
 {
   "extends": [
-    "@allahbin/eslint-config", // or "@allahbin/eslint-config/typescript",
-    "@allahbin/eslint-config/node"
+    "@allahbin/eslint", // or "@allahbin/eslint/typescript",
+    "@allahbin/eslint/node"
   ],
   "parserOptions": {
-    // Uncomment both if you are using typescript with node
-    // "project": "./tsconfig.json",
-    // "sourceType": "module" // https://github.com/mysticatea/eslint-plugin-node#-configs
+
   },
   "rules": {
-    // Uncomment if you are using typescript with node(ES Modules)
-    // "node/no-unsupported-features/es-syntax": ["error", {
-    //   "ignores": ["modules"]
-    // }],
-
     // your other overrides
   },
 }
@@ -112,15 +86,15 @@ It is to be used in combination with the base config (recommended)
 
 ### React
 
-It is to be used in combination with the base config (recommended)
+它将与基本配置结合使用（推荐）
 
 `.eslintrc.json:`
 
 ```json
 {
   "extends": [
-    "@allahbin/eslint-config", // or "@allahbin/eslint-config/typescript",
-    "@allahbin/eslint-config/react"
+    "@allahbin/eslint", // or "@allahbin/eslint-config/typescript",
+    "@allahbin/eslint/react"
   ],
   "parserOptions": {
     // Uncomment if you are using typescript configuration
