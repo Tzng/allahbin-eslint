@@ -1,6 +1,6 @@
 {
 	"name": "@allahbin/eslint",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "我为项目共享的ESLint和Prettier配置",
 	"author": "allahbin1996@gmail.com>",
 	"license": "MIT",
@@ -10,7 +10,7 @@
 	},
 	"main": "index.js",
 	"scripts": {
-		"publishNpm": "npm publish --access public --registry=https://registry.npmjs.org/",
+		"publishNpm": "yarn publish --access public --registry=https://registry.npmjs.org/",
 		"lint": "eslint . --ext .ts,.js",
 		"lint:fix": "eslint . --ext .ts,.js --fix"
 	},
