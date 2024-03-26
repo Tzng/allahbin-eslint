@@ -1,4 +1,4 @@
-const { tsRule, commRule, reactRule, overridesRule } = require('./comm');
+const { tsRule, overridesRule, commRule } = require('./comm');
 
 // eslint-disable-next-line no-undef
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
+    'plugin:vue/vue3-essential',
     'plugin:prettier/recommended'
   ],
   overrides: [
@@ -27,12 +27,12 @@ module.exports = {
     },
     ...overridesRule
   ],
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
+    parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },
-  plugins: ['@typescript-eslint', 'react-hooks', 'react', 'prettier', 'unused-imports'],
+  plugins: ['@typescript-eslint', 'vue', 'prettier', 'unused-imports'],
   rules: {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
@@ -40,8 +40,6 @@ module.exports = {
     // 下面是TS的配置
     ...tsRule,
     // 下面的是JS的配置
-    ...commRule,
-    // 下面是react的配置
-    ...reactRule
+    ...commRule
   }
 };
