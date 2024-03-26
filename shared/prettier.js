@@ -4,6 +4,17 @@ module.exports = {
   ],
   plugins: ['prettier'],
   rules: {
+    // 要求使用模板字面量而非字符串连接
+    'prefer-template': 2,
+    // 这个规则用于限制连续空行的数量，以保持代码样式整洁。
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max: 1,
+        maxEOF: 1,
+        maxBOF: 1,
+      },
+    ],
     // Prettier rules: https://prettier.io/docs/en/options.html
     'prettier/prettier': [
       'error',
