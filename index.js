@@ -4,10 +4,10 @@
  *  @author   abhijithvijayan <abhijithvijayan.in>
  *  @license  MIT License
  */
-
 module.exports = {
-	"extends": [
-		"./javascript.js"
-	],
-	"rules": {}
-}
+  extends: ['./javascript.js'],
+  parserOptions: {
+    requireConfigFile: false,
+  },
+  rules: {},
+};
