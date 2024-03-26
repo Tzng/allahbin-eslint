@@ -1,6 +1,6 @@
 {
 	"name": "@allahbin/eslint",
-	"version": "0.0.3",
+	"version": "0.0.5",
 	"description": "我为项目共享的ESLint和Prettier配置",
 	"author": "allahbin1996@gmail.com>",
 	"license": "MIT",
